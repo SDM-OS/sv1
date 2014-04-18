@@ -1,0 +1,97 @@
+{% extends 'feedback/layout.html' %}
+{% block content %}
+
+<div class="container">
+<br/>
+<br/>
+<form class="form-horizontal" action="register/" method="POST">
+{% csrf_token %}
+<fieldset>
+
+<!-- Form Name -->
+<center>
+<legend>Form Name</legend>
+</center>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name">Name</label>  
+  <div class="col-md-4">
+  <input id="name" name="name" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email Id</label>  
+  <div class="col-md-4">
+  <input id="email" name="email" type="text" placeholder="mail.me@gmail.com" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="phone">Phone Number</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">+91</span>
+      <input id="phone" name="phone" class="form-control" placeholder="8954521254" type="text">
+    </div>
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="service">Services</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="service" placeholder="Photographer , Caterer, Party planners,....." name="service"></textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="budget">Budget</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="budget" name="budget" class="form-control" placeholder="599" type="text">
+      <span class="input-group-addon">Rs</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="location">Location</label>  
+  <div class="col-md-4">
+  <input id="location" name="location" type="text" placeholder="Banglore" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  <label class="col-md-4 control-label" for="date">Date</label>  
+  <div class="col-md-4">
+  <input id="date" name="date" type="text" placeholder="2014-03-15" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-primary">Submit &raquo; </button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+</div>
+{% endblock %}
